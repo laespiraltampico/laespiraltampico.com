@@ -1,0 +1,326 @@
+/* ================= RESETEO Y ESTILOS GENERALES ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Fuente principal Montserrat */
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f4f6f8;
+    color: #222222;
+    line-height: 1.6;
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ================= ENCABEZADO ================= */
+.header-principal {
+    background-color: #0f3d33;
+    color: #ffffff;
+    padding: 1.2rem 0;
+    border-bottom: 4px solid #70aa8e;
+}
+
+.header-contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Logo con imagen */
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo img {
+    max-height: 100px; /* Altura del logo, cámbiala si lo necesitas más grande o chico */
+    width: auto;
+    object-fit: contain;
+}
+
+/* Slogan Central */
+.slogan-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+}
+
+.separador {
+    color: #70aa8e;
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+
+.slogan {
+    font-size: 0.95rem;
+    color: #e0e6e4;
+    font-style: italic;
+    font-weight: 400;
+}
+
+/* Botones de Acción (Búsqueda y Menú) */
+.header-acciones {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.btn-icono {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-icono:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #70aa8e;
+}
+
+.material-symbols-outlined {
+    font-size: 26px;
+}
+
+/* ================= CONTENIDO PRINCIPAL / SECCIÓN "SOMOS" ================= */
+.principal {
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.seccion-somos {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border-left: 6px solid #70aa8e;
+}
+
+@media (min-width: 768px) {
+    .seccion-somos {
+        flex-direction: row;
+    }
+
+    .somos-texto {
+        flex: 1;
+        padding-right: 20px;
+    }
+
+    .somos-imagen {
+        flex: 1;
+    }
+}
+
+/* Textos de la sección Somos */
+.subtitulo-seccion {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #70aa8e;
+    letter-spacing: 1.5px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.somos-texto h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #0f3d33;
+    margin-bottom: 15px;
+}
+
+.somos-texto p {
+    font-size: 1.1rem;
+    color: #444444;
+    line-height: 1.8;
+}
+
+.somos-texto strong {
+    font-weight: 700;
+    color: #0f3d33;
+}
+
+/* ================= IMAGEN MODERNA (PUENTE TAMPICO) ================= */
+.somos-imagen {
+    position: relative;
+    padding-right: 15px; /* Espacio para el cuadro de fondo */
+    padding-bottom: 15px;
+    width: 100%;
+}
+
+/* Efecto de cuadro desfasado color menta detrás de la foto */
+.somos-imagen::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 0;
+    bottom: 0;
+    background-color: #70aa8e;
+    border-radius: 16px;
+    z-index: 0;
+    transition: transform 0.3s ease;
+}
+
+/* Estilo de la foto principal */
+.somos-imagen img {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto 3D al pasar el cursor (mouse) sobre la foto */
+.somos-imagen:hover img {
+    transform: translate(-6px, -6px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.somos-imagen:hover::before {
+    transform: translate(4px, 4px);
+}
+
+/* ================= PIE DE PÁGINA ================= */
+.pie-pagina {
+    background-color: #0f3d33;
+    color: #ffffff;
+    padding: 40px 0 25px 0;
+}
+
+.footer-contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 35px;
+}
+
+.footer-contacto h3,
+.footer-redes h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #70aa8e;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-contacto p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+}
+
+.icono-contacto {
+    font-size: 20px;
+    color: #70aa8e;
+}
+
+.footer-contacto a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-contacto a:hover {
+    color: #70aa8e;
+}
+
+.redes-iconos {
+    display: flex;
+    gap: 15px;
+}
+
+.red-social {
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+.red-social:hover {
+    background-color: #70aa8e;
+    color: #0f3d33;
+    transform: translateY(-3px);
+}
+
+/* Divisor LA ESPIRAL (QUE INFORMA) */
+.divisor-firma {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin: 30px 0 20px 0;
+}
+
+.divisor-firma .linea {
+    flex: 1;
+    height: 1px;
+    background-color: rgba(112, 170, 142, 0.4);
+}
+
+.texto-firma {
+    color: #70aa8e;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    white-space: nowrap;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #a0b2ab;
+}
+
+/* Adaptabilidad a dispositivos móviles */
+@media (max-width: 767px) {
+    .header-contenido {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .slogan-container {
+        margin: 10px 0;
+    }
+
+    .footer-contenido {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+    
+    .footer-contacto p {
+        justify-content: center;
+    }
+}
